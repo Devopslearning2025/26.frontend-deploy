@@ -30,22 +30,22 @@ pipeline {
                 """
             }
         } 
-        stage("plan") {
-            steps {
-                sh """
-                    cd terraform
-                    terraform plan -var="app_Version=${params.appVersion}"
-                """
-            }
-        }
-        stage("deploy") {
-            steps {
-                sh """
-                    cd terraform
-                    terraform apply -auto-approve -var="app_Version=${params.appVersion}"
-                """
-            }
-        }         
+        // stage("plan") {
+        //     steps {
+        //         sh """
+        //             cd terraform
+        //             terraform plan -var="app_Version=${params.appVersion}"
+        //         """
+        //     }
+        // }
+        // stage("deploy") {
+        //     steps {
+        //         sh """
+        //             cd terraform
+        //             terraform apply -auto-approve -var="app_Version=${params.appVersion}"
+        //         """
+        //     }
+        // }         
     }
 
     post { 
