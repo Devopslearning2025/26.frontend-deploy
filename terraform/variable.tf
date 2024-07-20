@@ -21,6 +21,6 @@ variable "zone_name" {
 }
 
 #created this part of Jenkins CICD
-variable "app_Version" {
+variable "appVersion" {
   
 }
