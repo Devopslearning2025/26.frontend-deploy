@@ -15,7 +15,7 @@ pipeline {
         nexusUrl = 'nexus.devopslearning2025.online:8081'
     }
     stages {
-        stage('print the version'){
+        stage('read the version'){
             steps{
                 script{
                     echo "Application version: ${params.appVersion}"
@@ -30,15 +30,15 @@ pipeline {
                 """
             }
         }
-        // stage('Plan'){
-        //     steps{
-        //         sh """
-        //             pwd
-        //             cd terraform
-        //             terraform plan -var="app_version=${params.appVersion}"
-        //         """
-        //     }
-        // }
+        stage('Plan'){
+            steps{
+                sh """
+                    pwd
+                    cd terraform
+                    terraform plan -var="app_version=${params.appVersion}"
+                """
+            }
+        }
 
         // stage('Deploy'){
         //     steps{
