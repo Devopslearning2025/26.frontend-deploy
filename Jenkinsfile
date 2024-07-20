@@ -35,7 +35,7 @@ pipeline {
                 sh """
                     pwd
                     cd terraform
-                    terraform plan -var="app_version=${params.appVersion}"
+                    terraform plan -var="appVersion=${params.appVersion}"
                 """
             }
         }
@@ -44,7 +44,7 @@ pipeline {
         //     steps{
         //         sh """
         //             cd terraform
-        //             terraform apply -auto-approve -var="app_version=${params.appVersion}"
+        //             terraform apply -auto-approve -var="appVersion=${params.appVersion}"
         //         """
         //     }
         // }
