@@ -7,9 +7,9 @@ pipeline {
         disableConcurrentBuilds()
         ansiColor('xterm')
     }
-    parameters {
-        string(name: 'appVersion', defaultValue: '1.0.0', description: 'what is the application version?')
-    }
+    // parameters {
+    //     string(name: 'appVersion', defaultValue: '1.0.0', description: 'what is the application version?')
+    // }
     environment {
         def appVersion = '' //variable declaration
         nexusUrl = 'nexus.devopslearning2025.online:8081'
